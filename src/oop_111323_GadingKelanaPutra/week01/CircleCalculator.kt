@@ -1,6 +1,6 @@
 package oop_111323_GadingKelanaPutra.week01
 
-fun main(Args : Array<String>) {
+fun main() {
     val radius = 2.0
     val pi = 3.14
 
