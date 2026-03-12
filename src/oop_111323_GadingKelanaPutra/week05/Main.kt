@@ -28,4 +28,17 @@ fun main() {
     println("Luas Persegi (sisi 5): ${math.hitungLuas(5)}")
     println("Luas Persegi Panjang (5x10): ${math.hitungLuas(5, 10)}")
     println("Luas Lingkaran (r 7.0): ${math.hitungLuas(7.0)}")
+    println()
+
+
+    val wallet = EWallet(accountName = "Gading", balance = 50000.0)
+    val card = CreditCard(accountName = "Gading", limit = 100000.0)
+
+    val listPayment: List<PaymentMethod> = listOf(wallet, card)
+
+    println("=== SISTEM PEMBAYARAN (Checkpoint 10) ===")
+    for (payment in listPayment) {
+        payment.processPayment(75000.0)
+    }
+
 }
