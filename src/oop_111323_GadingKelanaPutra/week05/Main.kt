@@ -39,6 +39,12 @@ fun main() {
     println("=== SISTEM PEMBAYARAN (Checkpoint 10) ===")
     for (payment in listPayment) {
         payment.processPayment(75000.0)
-    }
 
+        if (payment is EWallet && payment.balance < 75000.0) {
+            println("=> Recovery: Saldo kurang, otomatis top up 50.000...")
+            payment.topUp(50000.0)
+            payment.processPayment(75000.0)
+        }
+        println("-------------------")
+    }
 }
