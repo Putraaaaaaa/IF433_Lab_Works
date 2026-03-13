@@ -10,4 +10,12 @@ class SmartHomeHub {
             if (device is Switchable) { device.turnoff() }
         }
     }
+
+    fun activateSecurityMode() {
+        for (device in devices) {
+            if (device is Recordable) { device.startRecord() }
+            if (device is SmartSpeaker) { device.playMusic("Sirine Peringatan") }
+        }
+    }
 }
+
