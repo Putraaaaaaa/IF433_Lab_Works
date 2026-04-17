@@ -16,7 +16,7 @@ fun main() {
             val product = parser.parseProduct(raw)
             product?.let { parser.checkout(it) }
         } catch (e: IllegalArgumentException) {
-            println("DATA CORRUPT WARNING: ${e.message}")
+            println("DATA CORRUPT WARNING: ${e.message}") //After
         }
     }
 }
