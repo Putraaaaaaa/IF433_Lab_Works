@@ -28,4 +28,9 @@ fun main() {
         is Loading -> "Tampilkan Spinner"
     }
     println(uiMessage)
+
+
+    println("\n=== RPG SIMULATION ===")
+    GameManager.startGame()
+    GameManager.startGame()
 }
