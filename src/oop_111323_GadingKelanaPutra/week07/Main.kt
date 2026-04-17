@@ -33,4 +33,8 @@ fun main() {
     println("\n=== RPG SIMULATION ===")
     GameManager.startGame()
     GameManager.startGame()
+
+    println("Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}%")
+    val myWeapon = Weapon.forgeStarterSword()
+    println("Senjata awal: ${myWeapon.item.name} dengan Durability: ${myWeapon.durability}")
 }
