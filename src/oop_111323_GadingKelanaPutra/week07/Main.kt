@@ -22,9 +22,10 @@ fun main() {
 
     println("\n=== TEST SEALED CLASS ===")
     val response: ApiResponse = Success("Data berhasil ditarik!")
-    // Akan error karena 'Loading' belum di-handle
     val uiMessage = when (response) {
         is Success -> "Tampilkan: ${response.data}"
         is Error -> "Munculkan alert: ${response.message}"
+        is Loading -> "Tampilkan Spinner"
     }
+    println(uiMessage)
 }
