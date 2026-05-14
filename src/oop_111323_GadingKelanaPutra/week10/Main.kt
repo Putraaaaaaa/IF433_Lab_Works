@@ -1,5 +1,7 @@
 package oop_111323_GadingKelanaPutra.week10
 
+import oop_111323_GadingKelanaPutra.week10.myGetMax
+
 fun main() {
     println("=== TEST GENERIC CLASS ===")
     val intBox = Box(100)
@@ -20,5 +22,5 @@ fun main() {
     println("\n=== TEST CONSTRAINTS ===")
     val math = MathBox(10.5, 20)
     println("Total: ${math.sum()}")
-    println("Terbesar: ${getMax(45, 90)}")//done
+    println("Terbesar: ${myGetMax(45, 90)}")//done
 }
